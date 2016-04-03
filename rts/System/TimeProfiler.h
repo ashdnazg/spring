@@ -15,7 +15,8 @@
 
 // disable this if you want minimal profiling
 // (sim time is still measured because of game slowdown)
-#define SCOPED_TIMER(name) ScopedTimer myScopedTimerFromMakro(name);
+#define SCOPED_TIMER(name)
+//ScopedTimer myScopedTimerFromMakro(name);
 #define SCOPED_MT_TIMER(name) ScopedMtTimer myScopedTimerFromMakro(name);
 
 
