@@ -12,7 +12,7 @@ MD %build_dir%
   
 :Generate
   PUSHD %build_dir%
-    cmake ..
+    cmake .. -DAI_TYPES=NATIVE
     msbuild Spring.sln /target:engineSim /p:Configuration=%configuration% /m:2 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
   POPD
 EXIT /b
