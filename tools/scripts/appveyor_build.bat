@@ -1,3 +1,7 @@
+SET "root=%CD%"
+SET "build_dir=%root%\build"
+MD %build_dir%
+
 :Setup
   PUSHD %root%
     ECHO Cloning vclibs
