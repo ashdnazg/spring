@@ -12,7 +12,7 @@ MD %build_dir%
   
 :Generate
   PUSHD %build_dir%
-    cmake .. -DAI_TYPES=NATIVE -DBOOST_LIBRARYDIR=C:/Libraries/boost_1_59_0
+    cmake .. -DAI_TYPES=NATIVE -DBOOST_ROOT=C:/Libraries/boost_1_59_0
     msbuild Spring.sln /target:engineSim /p:Configuration=%configuration% /m:2 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
   POPD
 EXIT /b
