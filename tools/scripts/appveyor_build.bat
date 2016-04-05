@@ -9,6 +9,6 @@
 :Generate
   PUSHD %build_dir%
     cmake ..
-    msbuild Spring.sln /t:Build /p:Configuration=%configuration% /m:2 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+    msbuild Spring.sln /target:engineSim /p:Configuration=%configuration% /m:2 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
   POPD
 EXIT /b
