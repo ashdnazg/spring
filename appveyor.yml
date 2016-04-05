@@ -1,0 +1,9 @@
+version: "{build}"
+
+configuration: Debug
+
+matrix:
+    fast_finish: true
+
+build_script:
+    - cmd: tools\scripts\appveyor_build.bat
