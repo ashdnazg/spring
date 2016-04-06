@@ -7,7 +7,7 @@ MD %build_dir%
     ECHO Cloning vclibs
     git clone -q https://github.com/spring/vclibs14 vclibs
   POPD
-  MOVE "C:\Program Files (x86)\Windows Kits\8.1\Include\um\GL\gl.h" "C:\Program Files (x86)\Windows Kits\8.1\Include\um\GL\gl.h.bak"
+  MOVE "C:\Program Files (x86)\Windows Kits\8.1\Include\um\GL" "C:\Program Files (x86)\Windows Kits\8.1\Include\um\GLBAK"
   
 :Generate
   PUSHD %build_dir%
