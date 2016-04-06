@@ -243,8 +243,12 @@ if    (USE_LIBSQUISH)
 endif (USE_LIBSQUISH)
 
 
-
-FIND_PACKAGE(Boost 1.51.0 COMPONENTS thread regex program_options system chrono signals filesystem)
+if (CMAKE_VERSION VERSION_EQUAL 3.5.0)
+	Message(WARNING "Boost dependency detection is broken in cmake 3.5.0, make sure they are correct or use an older cmake version")
+	FIND_PACKAGE(Boost 1.51.0 COMPONENTS thread regex program_options system chrono signals filesystem)
+else (CMAKE_VERSION VERSION_EQUAL 3.5.0)
+	FIND_PACKAGE(Boost 1.51.0 COMPONENTS thread regex program_options system chrono signals filesystem REQUIRED)
+endif (CMAKE_VERSION VERSION_EQUAL 3.5.0)
 FIND_PACKAGE(Boost 1.51.0 COMPONENTS timer)
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
 
