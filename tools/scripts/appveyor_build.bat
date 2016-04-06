@@ -7,11 +7,10 @@ MD %build_dir%
     ECHO Cloning vclibs
     git clone -q https://github.com/spring/vclibs14 vclibs
   POPD
-  MOVE "C:\Program Files (x86)\Windows Kits\8.1\Include\um\GL" "C:\Program Files (x86)\Windows Kits\8.1\Include\um\GLBAK"
   
 :Generate
   PUSHD %build_dir%
     cmake .. -DAI_TYPES=NATIVE -DBOOST_INCLUDEDIR=C:/Libraries/boost_1_59_0/include
-    msbuild Spring.sln /target:engine-headless /p:Configuration=%configuration% /m:2 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+    msbuild Spring.sln /target:engine-legacy /p:Configuration=%configuration% /m:2 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
   POPD
 EXIT /b
