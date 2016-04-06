@@ -6,8 +6,6 @@ MD %build_dir%
   PUSHD %root%
     ECHO Cloning vclibs
     git clone -q https://github.com/spring/vclibs14 vclibs
-    ECHO Cloning pr-downloader
-    git clone -q https://github.com/spring/pr-downloader
   POPD
   
 :Generate
