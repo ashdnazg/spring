@@ -11,6 +11,6 @@ MD %build_dir%
 :Generate
   PUSHD %build_dir%
     cmake .. -DAI_TYPES=NATIVE -DBOOST_INCLUDEDIR=C:/Libraries/boost_1_59_0/include
-    msbuild Spring.sln /target:engine-headless /p:Configuration=%configuration% /m:2
+    msbuild Spring.sln /target:engine-headless /p:Configuration=%configuration% /p:DebugSymbols=false /p:DebugType=None /m:2
   POPD
 EXIT /b
