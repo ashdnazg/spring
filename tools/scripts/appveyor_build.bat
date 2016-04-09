@@ -6,6 +6,7 @@ MD %build_dir%
   PUSHD %root%
     ECHO Cloning vclibs
     git clone -q https://github.com/spring/vclibs14 vclibs
+    git submodule update --init --recursive
   POPD
   
 :Generate
